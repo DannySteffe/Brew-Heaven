@@ -1,6 +1,6 @@
 import React from "react";
+import Home from "./Home";
 
-const Home = () => <div>Home Page</div>;
 const Menu = () => <div>Menu Page</div>;
 const About = () => <div>About Page</div>;
 const Gallery = () => <div>Gallery Page</div>;
