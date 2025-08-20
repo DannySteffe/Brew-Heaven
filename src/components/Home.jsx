@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import { useCart } from "../hooks/useCart";
 
 const bestSellers = [
   {
@@ -26,9 +27,9 @@ const bestSellers = [
 ];
 
 const Home = () => {
+  const { dispatch } = useCart();
   const handleAddToCart = (product) => {
-    console.log("Added to cart:", product);
-    // Here you would typically handle the logic to add the product to a shopping cart state
+    dispatch({ type: "ADD_ITEM", payload: product });
   };
 
   return (

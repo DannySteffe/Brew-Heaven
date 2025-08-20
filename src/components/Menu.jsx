@@ -1,14 +1,15 @@
 import React, { useState, useMemo } from "react";
 import { items, categories } from "../data/menu";
 import ProductCard from "./ProductCard";
+import { useCart } from "../hooks/useCart";
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("name-asc");
+  const { dispatch } = useCart();
 
   const handleAddToCart = (product) => {
-    console.log("Added to cart:", product);
-    // In a real app, you'd update global state or context here
+    dispatch({ type: "ADD_ITEM", payload: product });
   };
 
   const filteredAndSortedItems = useMemo(() => {
