@@ -20,7 +20,7 @@ export const items = [
     name: 'Cappuccino',
     price: 3.50,
     category: 'Hot Coffee',
-    img: 'https://images.unsplash.com/photo-1557006029-3b2b36a5b17c?q=80&w=1974&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1517244683847-7456b63c5969?q=80&w=1974&auto=format&fit=crop',
     shortDesc: 'Espresso with steamed milk foam.',
   },
   // Cold Coffee
@@ -29,7 +29,7 @@ export const items = [
     name: 'Iced Latte',
     price: 4.00,
     category: 'Cold Coffee',
-    img: 'https://images.unsplash.com/photo-1517701550927-20c55d514234?q=80&w=1974&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=1974&auto=format&fit=crop',
     shortDesc: 'Chilled espresso with milk over ice.',
   },
   {
@@ -37,7 +37,7 @@ export const items = [
     name: 'Cold Brew',
     price: 4.50,
     category: 'Cold Coffee',
-    img: 'https://images.unsplash.com/photo-1517701550927-20c55d514234?q=80&w=1974&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1974&auto=format&fit=crop',
     shortDesc: 'Smooth, low-acid coffee steeped for 12 hours.',
   },
   // Snacks
@@ -46,9 +46,17 @@ export const items = [
     name: 'Croissant',
     price: 2.75,
     category: 'Snacks',
-    img: 'https://images.unsplash.com/photo-1587241321921-91a834d6d194?q=80&w=1974&auto=format&fit=crop',
+    img: 'https://www.gateauyaourt.net/wp-content/uploads/2025/02/croissant.webp',
     shortDesc: 'Buttery, flaky, and freshly baked.',
   },
+
+
+
+
+
+
+
+  
   {
     id: 6,
     name: 'Avocado Toast',
