@@ -1,10 +1,8 @@
-import React from "react";
 import Home from "./Home";
 import Menu from "./Menu";
-
-const About = () => <div>About Page</div>;
-const Gallery = () => <div>Gallery Page</div>;
-const Blog = () => <div>Blog Page</div>;
-const Contact = () => <div>Contact Page</div>;
+import About from "./About";
+import Gallery from "./Gallery";
+import Blog from "./Blog";
+import Contact from "./Contact";
 
 export { Home, Menu, About, Gallery, Blog, Contact };
