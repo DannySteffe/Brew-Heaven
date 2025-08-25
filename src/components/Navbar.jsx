@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../hooks/useCart";
+import DarkModeToggle from "./DarkModeToggle";
 
 const NavLink = ({ to, children }) => (
   <Link
@@ -41,26 +42,7 @@ const Navbar = () => {
 
           {/* Action Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* Dark Mode Toggle */}
-            <button
-              aria-label="Toggle dark mode"
-              className="p-2 rounded-full text-white hover:bg-coffee-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-coffee-800 focus:ring-white"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                />
-              </svg>
-            </button>
+            <DarkModeToggle />
 
             {/* Cart Icon */}
             <button
@@ -151,25 +133,7 @@ const Navbar = () => {
           {/* Mobile Action Icons */}
           <div className="pt-4 pb-3 border-t border-coffee-700">
             <div className="flex items-center px-5 space-x-4">
-              <button
-                aria-label="Toggle dark mode"
-                className="p-2 rounded-full text-white hover:bg-coffee-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-coffee-800 focus:ring-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                  />
-                </svg>
-              </button>
+              <DarkModeToggle />
               <button
                 aria-label={`Cart with ${totalItems} items`}
                 className="relative p-2 rounded-full text-white hover:bg-coffee-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-coffee-800 focus:ring-white"
