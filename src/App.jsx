@@ -8,19 +8,20 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
+      <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        <header>
+          <Navbar />
+        </header>
         <main className="flex-grow container mx-auto p-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/blog" element={<Blog />} />
+            // ... existing code ...
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
         <CartDrawer />
       </div>
     </Router>

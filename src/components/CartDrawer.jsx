@@ -80,56 +80,17 @@ const CartDrawer = () => {
         {/* Cart Items */}
         <div className="flex-grow overflow-y-auto p-4">
           {items.length === 0 ? (
-            <p className="text-center text-gray-500 font-body">
-              Your cart is empty.
-            </p>
+            <div className="text-center text-gray-500 font-body h-full flex flex-col justify-center items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h3 className="text-lg font-semibold text-gray-700">Your cart is empty.</h3>
+              <p className="text-sm">Add some delicious coffee to get started!</p>
+            </div>
           ) : (
             items.map((item) => (
               <div
-                key={item.id}
-                className="flex items-center justify-between py-2 border-b"
-              >
-                <div>
-                  <p className="font-bold font-body">{item.name}</p>
-                  <p className="text-sm text-gray-600">
-                    ${item.price.toFixed(2)}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => handleDecrement(item.id)}
-                    className="px-2 border rounded"
-                  >
-                    -
-                  </button>
-                  <span>{item.qty}</span>
-                  <button
-                    onClick={() => handleIncrement(item.id)}
-                    className="px-2 border rounded"
-                  >
-                    +
-                  </button>
-                  <button
-                    onClick={() => handleRemove(item.id)}
-                    className="text-red-500 hover:text-red-700 ml-2"
-                    aria-label={`Remove ${item.name}`}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                      />
-                    </svg>
-                  </button>
-                </div>
+// ... existing code ...
               </div>
             ))
           )}

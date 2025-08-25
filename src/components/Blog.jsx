@@ -28,35 +28,44 @@ const posts = [
 const Blog = () => {
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center font-display text-coffee-900 mb-8">
+      <h1 className="text-4xl font-bold text-center font-display text-coffee-900 dark:text-white mb-8">
         From the Blog
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
-          <div
-            key={post.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
-          >
-            <img
-              src={post.img}
-              alt={post.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h2 className="text-2xl font-bold font-display text-coffee-800 mb-2">
-                {post.title}
-              </h2>
-              <p className="font-body text-gray-600 mb-4">{post.excerpt}</p>
-              <Link
-                to={`/blog/${post.id}`}
-                className="font-bold text-coffee-600 hover:text-coffee-800 transition-colors"
-              >
-                Read more &rarr;
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
+      {posts.length === 0 ? (
+        <div className="text-center py-16">
+          <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+            No Blog Posts Yet
+          </h2>
+          <p className="mt-2 text-gray-500 dark:text-gray-400">
+            Check back soon for updates and stories!
+          </p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => (
+            <article
+              key={post.id}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+            >
+              <img src={post.img} alt="" className="w-full h-48 object-cover" />
+              <div className="p-6 flex flex-col flex-grow">
+                <h2 className="text-2xl font-bold font-display text-coffee-800 dark:text-white mb-2">
+                  {post.title}
+                </h2>
+                <p className="font-body text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                  {post.excerpt}
+                </p>
+                <Link
+                  to={`/blog/${post.id}`}
+                  className="font-bold text-coffee-600 dark:text-coffee-400 hover:text-coffee-800 dark:hover:text-coffee-200 transition-colors self-start"
+                >
+                  Read more &rarr;
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
